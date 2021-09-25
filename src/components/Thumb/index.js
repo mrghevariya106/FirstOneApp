@@ -12,7 +12,7 @@ const Thumb = ({ image, movieId, clickable}) => (
             </Link>
         ) : (
             <Image src={image} alt='movie-thumb' />
-        )};
+        )}
     </div>
 );
 
