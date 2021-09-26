@@ -1,5 +1,5 @@
 import React from "react";
-import ProtoTypes from "prop-types";
+import PropTypes from "prop-types";
 
 // styled
 import { Wrapper, Image } from "./Actor.style";
@@ -12,7 +12,7 @@ const Actor = ({ name, character, imageUrl }) => (
   </Wrapper>
 );
 
-Actor.propTypes = {
+Actor.propType = {
   name: PropTypes.string,
   character: PropTypes.string,
   imageUrl: PropTypes.string,
