@@ -13,7 +13,7 @@ export const Div1 = styled.div`
 
     useEffect(() =>{
         document.title = `You clicked ${count} timnes`;
-        console.log(document.title)
+        // console.log(document.title)
     })
 
     return (
