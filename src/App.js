@@ -11,7 +11,6 @@ import NotFound from "./components/NotFound";
 
 // style
 import { GlobalStyle } from "./GlobalStyle";
-import PrecticeFile from "./PrecticeFile";
 
 const App = () => (
   <Router>
@@ -22,7 +21,6 @@ const App = () => (
       <Route path="/*" element={<NotFound />} />
     </Routes>
     <GlobalStyle />
-    {/* <PrecticeFile /> */}
   </Router>
 );
 
