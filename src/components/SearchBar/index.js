@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+// import React, { Component } from "react";  // for ClassComponent method un-comment this
+
 import PropTypes from "prop-types";
 
 // image
@@ -7,6 +9,7 @@ import searchIcon from "../../images/search-icon.svg";
 // styled
 import { Wrapper, Content } from "./SearchBar.style";
 
+// Using function components method
 const SearchBar = ({ setSearchTerm }) => {
   const [state, setState] = useState("");
   const initial = useRef(true);
@@ -38,6 +41,45 @@ const SearchBar = ({ setSearchTerm }) => {
     </Wrapper>
   );
 };
+
+// Using Class components method
+/*
+class SearchBar extends Component {
+  state = { value: "" };
+  timeouts = null;
+
+  componentDidUpdate(_prevProps, prevState) {
+    if (this.state.value !== prevState.value) {
+      const { setSearchTerm } = this.props;
+
+      clearTimeout(this.timeout);
+
+      this.timeout = setTimeout(() => {
+        const { value } = this.state;
+        setSearchTerm(value);
+      }, 500);
+    }
+  }
+
+  render() {
+    const { value } = this.state;
+    return (
+      <Wrapper>
+        <Content>
+          <img src={searchIcon} alt="search-icon" />
+          <input
+            type="text"
+            placeholder="Search Movie"
+            onChange={(event) =>
+              this.setState({ value: event.currentTarget.value })
+            }
+            value={value}
+          />
+        </Content>
+      </Wrapper>
+    );
+  }
+}*/
 
 SearchBar.propTypes = {
   callback: PropTypes.func,
