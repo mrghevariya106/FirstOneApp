@@ -9,7 +9,7 @@ import Button from "./Button";
 import { Wrapper } from "./Login.style";
 
 // Context
-import { Context } from "D:/Development/FirstOne-StreamingApp/react-first-one/src/context.js";
+import { Context } from "../context";
 
 const Login = () => {
   const [username, setUsername] = useState("");
