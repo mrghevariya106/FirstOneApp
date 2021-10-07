@@ -18,7 +18,7 @@ const Login = () => {
 
   const [_user, setUser] = useContext(Context);
   const navigate = useNavigate();
-
+  console.log(_user);
   const handleSubmit = async () => {
     setError(false);
     try {
